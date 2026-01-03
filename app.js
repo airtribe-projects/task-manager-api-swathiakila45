@@ -5,6 +5,8 @@ const port = 3000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+app.use('/tasks',tasksRouter)
+
 app.listen(port, (err) => {
     if (err) {
         return console.log('Something bad happened', err);
